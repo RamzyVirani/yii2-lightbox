@@ -41,7 +41,15 @@ class Lightbox extends Widget {
                 $options = [];
             }
             $img = Html::img($src, $options);
-            $a = Html::a($img, $file['original'], $attributes);
+            
+            if(is_array($file['original'])){
+                $src = $file['original']['src'];
+                $options = $attributes + $file['original']['htmlOptions'];
+            } else {
+                $src = $file['original'];
+                $options = $attributes;
+            }
+            $a = Html::a($img, $src, $options);
             $html .= $a;
         }
         return $html;
