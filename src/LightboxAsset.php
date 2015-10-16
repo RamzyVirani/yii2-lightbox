@@ -1,6 +1,6 @@
 <?php
 
-namespace branchonline\lightbox;
+namespace ramzyvirani\lightbox;
 
 use yii\web\AssetBundle;
 
