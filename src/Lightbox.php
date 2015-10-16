@@ -6,7 +6,7 @@ use yii\base\Widget;
 use yii\helpers\Html;
 
 class Lightbox extends Widget {
-
+    
     /**
      * @var array containing the attributes for the images
      */
@@ -33,7 +33,14 @@ class Lightbox extends Widget {
                 $attributes['data-lightbox'] = 'image-' . uniqid();
             }
 
-            $img = Html::img($file['thumb']);
+            if(is_array($file['thumb'])){
+                $src = $file['thumb']['src'];
+                $options = $file['thumb']['htmlOptions'];
+            } else {
+                $src = $file['thumb'];
+                $options = [];
+            }
+            $img = Html::img($src, $options);
             $a = Html::a($img, $file['original'], $attributes);
             $html .= $a;
         }
