@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist branchonline/yii2-lightbox "*"
+php composer.phar require --prefer-dist ramzyvirani/yii2-lightbox "*"
 ```
 
 or add
 
 ```json
-"branchonline/yii2-lightbox": "*"
+"ramzyvirani/yii2-lightbox": "*"
 ```
 
 to the require section of your composer.json.
