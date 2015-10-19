@@ -36,3 +36,23 @@ echo Lightbox::widget([
     ]
 ]);
 ```
+
+To add html options you can use below syntax
+
+```php
+echo Lightbox::widget([
+    'files' => [
+        [
+            'thumb' => [
+                'src'=>'url/to/thumb.ext',
+                'htmlOptions' => ['class'=>'col-md-12', 'alt'=>'Alternate Text'] // These options will be applied to Image tag.
+            ],
+            'original' => [
+                'src' => 'url/to/original.ext',
+            ]
+            'title' => 'optional title',
+        ],
+    ]
+]);
+```
+
